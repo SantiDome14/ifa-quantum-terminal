@@ -40,7 +40,7 @@ try:
 except:
     pass
 
-# CSS
+# CSS - AQUI ESTA LA CORRECCION VISUAL
 st.markdown("""
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
@@ -86,11 +86,22 @@ st.markdown("""
         background-color: #E2E8F0 !important;
         color: #000000 !important;
     }
+    
+    /* ESTILOS DE INPUTS Y TEXTAREAS */
     [data-testid="stSidebar"] input, [data-testid="stSidebar"] textarea {
         background-color: #FFFFFF !important;
         color: #000000 !important;
         font-weight: 600 !important;
     }
+    
+    /* --- CORRECCION: PLACEHOLDERS GRIS OSCURO --- */
+    [data-testid="stSidebar"] input::placeholder,
+    [data-testid="stSidebar"] textarea::placeholder {
+        color: #64748b !important; /* Gris oscuro para visibilidad */
+        opacity: 1 !important;
+    }
+    /* -------------------------------------------- */
+
     [data-testid="stSidebar"] [data-testid="stDateInput"] div[data-baseweb="input"] {
         background-color: #FFFFFF !important;
     }
